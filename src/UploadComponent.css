@@ -1,0 +1,167 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(177,16,205);
+  background: linear-gradient(155deg, rgba(177,16,205,1) 36%, rgba(30,34,235,1) 90%);
+}
+
+.logo{
+  position: absolute;
+  top:1vw;
+  left:2vw; 
+}
+.logo h1{
+  color: aliceblue;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size:50px;
+}
+.form {
+  background-color: rgba(255, 255, 255, 0.368);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  /* backdrop-filter: brightness(60%); */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  /* height: 400px; */
+  max-width: 500px;
+}
+
+
+.image-upload {
+  border: 2px dashed #cccccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.image-upload p {
+  margin: 0;
+  color:#faeded;
+}
+
+.image-upload img {
+  max-width: 10vw;
+  border-radius: 5px;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.cancel-button,
+.next-step-button,
+.upload-button,
+.capture-button,
+.retake-button {
+  background-color: #2600fff9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cancel-button:hover,
+.next-step-button:hover,
+.upload-button:hover,
+.capture-button:hover,
+.retake-button:hover {
+  background-color: #0056b3;
+}
+
+.cancel-button:active,
+.next-step-button:active,
+.upload-button:active,
+.capture-button:active,
+.retake-button:active {
+  transform: scale(0.98);
+}
+
+.video-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+video {
+  width: 32vw;
+  height: 24vw;
+  border-radius: 10px;
+}
+
+.capture-button {
+  position: absolute;
+  bottom: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .image-upload img {
+    max-width: 20vw;
+  }
+
+  video {
+    width: 80vw;
+    height: 60vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .body {
+    padding: 5px;
+  }
+
+  .form {
+    padding: 5px;
+  }
+
+
+  .image-upload img {
+    max-width: 40vw;
+    padding: 5px;
+  }
+
+  video {
+    width: 100vw;
+    height: 75vw;
+  }
+
+  .capture-button {
+    bottom: 10px;
+    padding: 5px 10px;
+  }
+
+  .cancel-button,
+  .next-step-button,
+  .upload-button,
+  .capture-button,
+  .retake-button {
+    padding: 8px 16px;
+  }
+  video {
+    width: 68vw;
+    height: 52vw;
+    border-radius: 10px;
+  }
+  
+}
