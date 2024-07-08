@@ -47,7 +47,12 @@
 
 .image-upload p {
   margin: 0;
-  color:#faeded;
+  color:#f7efa1;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size:25px;
+
 }
 
 .image-upload img {
@@ -114,11 +119,61 @@ video {
   bottom: 20px;
 }
 
+.notification-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #3ced07;
+  padding: 20px;
+  border-radius: 3px;
+  color: aliceblue;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.notification {
+  font-size: 25px;
+  color: #f5f3f3;
+}
+
+.upload-notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4vw;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+}
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .image-upload img {
     max-width: 20vw;
   }
+
+  .notification-popup {
+    width: 80%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .upload-notification {
+    padding: 6px;
+    font-size: 14px;
+    height: max-content;
+
+  }
+
+  .notification {
+    font-size: 25px;
+    color: #f5f3f3;
+  }
+  
 
   video {
     width: 80vw;
@@ -162,6 +217,16 @@ video {
     width: 68vw;
     height: 52vw;
     border-radius: 10px;
+  }
+  .notification-popup {
+    width: 80%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .upload-notification {
+    padding: 5px;
+    font-size: 14px;
   }
   
 }
